@@ -86,6 +86,7 @@
         app:boxCornerRadiusTopEnd="10dp"
         app:boxCornerRadiusBottomEnd="10dp">
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etEmailOrMobile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter your email"
@@ -140,6 +141,7 @@
             android:textColor="@color/unique" />
 
         <TextView
+            android:id="@+id/tvLoginWithMobile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="125sp"
@@ -178,6 +180,7 @@
             android:layout_height="wrap_content"
             android:text="Facebook"
             android:textColor="@color/black"
+            android:textSize="15sp"
             android:backgroundTint="@color/white"
             android:layout_margin="20dp"
             app:icon="@drawable/facebook_icon"
@@ -194,6 +197,7 @@
             android:layout_height="wrap_content"
             android:text="Google"
             android:textColor="@color/black"
+            android:textSize="15sp"
             android:backgroundTint="@color/white"
             android:layout_margin="20dp"
             app:icon="@drawable/google_icon"
