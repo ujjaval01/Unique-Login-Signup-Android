@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">UniqueLoginAndSignup</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="enter_your_credintial_to_sign_in">Enter Your Credintial to Sign In...</string>
+    <string name="login_with_mobile">Login with mobile</string>
+    <string name="forget_password">Forget Password?</string>
 </resources>
