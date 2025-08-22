@@ -5,4 +5,11 @@
     <string name="enter_your_credintial_to_sign_in">Enter Your Credintial to Sign In...</string>
     <string name="login_with_mobile">Login with mobile</string>
     <string name="forget_password">Forget Password?</string>
+    <string name="enter_your_credintial_to_sign_up">Enter your credintial to sign up</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="enter_your_phone_number">Enter your phone number</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="facebook">Facebook</string>
+    <string name="google">Google</string>
+    <string name="enter_your_password">Enter your password</string>
 </resources>

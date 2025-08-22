@@ -21,6 +21,7 @@
         android:layout_marginStart="10dp">
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/signInPage"
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_weight="1"
@@ -35,6 +36,7 @@
             android:layout_height="10dp"/>
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/signUpPage"
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_weight="1"
@@ -89,7 +91,7 @@
             android:id="@+id/etEmailOrMobile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter your email"
+            android:hint="@string/enter_your_email"
             android:drawableStart="@drawable/baseline_email_24"
             android:textColor="@color/white"
             android:inputType="textEmailAddress"
@@ -116,7 +118,7 @@
     <com.google.android.material.textfield.TextInputEditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter your password"
+        android:hint="@string/enter_your_password"
         android:textSize="18sp"
         android:drawableStart="@drawable/baseline_lock_24"
         android:textColor="@color/white"
@@ -135,6 +137,7 @@
         android:paddingEnd="20dp">
 
         <TextView
+            android:id="@+id/tvForget"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/forget_password"
@@ -151,6 +154,7 @@
     </LinearLayout>
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/signInBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/sign_in"
@@ -175,10 +179,11 @@
         android:orientation="horizontal">
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/facebookBtn"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="Facebook"
+            android:text="@string/facebook"
             android:textColor="@color/black"
             android:textSize="15sp"
             android:backgroundTint="@color/white"
@@ -192,10 +197,11 @@
             />
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/googleBtn"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="Google"
+            android:text="@string/google"
             android:textColor="@color/black"
             android:textSize="15sp"
             android:backgroundTint="@color/white"
