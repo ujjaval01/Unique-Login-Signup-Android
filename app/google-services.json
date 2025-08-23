@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "188455279724",
+    "project_id": "uniqueloginandsignup",
+    "storage_bucket": "uniqueloginandsignup.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:188455279724:android:ec716e3363717fd61c8c49",
+        "android_client_info": {
+          "package_name": "com.example.uniqueloginandsignup"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-2tGPduYsXvd9kY1P1QTb03ORpqUGjZQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -7,21 +7,53 @@ import android.os.Handler
 import android.os.Looper
 import android.text.InputType
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
+import com.google.firebase.auth.FirebaseAuth
 
 class LoginActivity : AppCompatActivity() {
 
     private var isMobileLogin = false
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_login)
+
+        auth = FirebaseAuth.getInstance()
+        val signInBtn = findViewById<MaterialButton>(R.id.signInBtn)
+
+        signInBtn.setOnClickListener {
+            val emailOrMobile = findViewById<TextInputEditText>(R.id.etEmailOrMobile).text.toString().trim()
+            val etPassword = findViewById<TextInputEditText>(R.id.etPassword).text.toString().trim()
+
+            if(emailOrMobile.isEmpty() || etPassword.isEmpty()){
+                Toast.makeText(this,"Please fill all the fields", Toast.LENGTH_SHORT).show()
+            }
+            else {
+                auth.signInWithEmailAndPassword(emailOrMobile, etPassword)
+                    .addOnCompleteListener(this) { task ->
+                        if (task.isSuccessful) {
+                            Toast.makeText(this, "Sign In Successful", Toast.LENGTH_SHORT).show()
+                            val intent = Intent(this, MainActivity::class.java)
+                            startActivity(intent)
+                            finish()
+                        } else {
+                            Toast.makeText(this, "Sign In Failed: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
+                        }
+                    }
+            }
+
+        }
+
+
+
 
         val etEmailOrMobile = findViewById<TextInputEditText>(R.id.etEmailOrMobile)
         val tvLoginWithMobile = findViewById<TextView>(R.id.tvLoginWithMobile)
@@ -39,7 +71,7 @@ class LoginActivity : AppCompatActivity() {
                 val intent = Intent(this, SignUpActivity::class.java)
                 startActivity(intent)
                 finish()
-            }, 1000) // 2 second delay
+            }, 700)
 
         }
 
